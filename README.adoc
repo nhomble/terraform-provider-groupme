@@ -1,4 +1,8 @@
-# Terraform Provider for GroupMe
+:toc: macro
+
+= Terraform Provider for GroupMe
+
+image:https://github.com/nhomble/terraform-provider-groupme/workflows/Go/badge.svg[CI]
 
 [.lead]
 a small custom provider to interact with https://dev.groupme.com/[groupme]
