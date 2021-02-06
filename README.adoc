@@ -1,0 +1,42 @@
+# Terraform Provider for GroupMe
+
+[.lead]
+a small custom provider to interact with https://dev.groupme.com/[groupme]
+
+toc::[]
+
+== Examples
+
+Complete examples can be found in `examples/`
+
+[source,hcl-terraform]
+----
+provider groupme {
+  api_key = var.groupme_token
+}
+
+data groupme_groups all {
+
+}
+
+data groupme_group a_group {
+  group_id = element(tolist(data.groupme_groups.all.ids), 0)
+}
+
+output all {
+  value = data.groupme_groups.all.ids
+}
+
+output a_group {
+  value = data.groupme_group.a_group
+}
+----
+
+== Local Development
+
+Until (and I probably won't) register this to `registry.terraform.io`, your only way of using this is to install in your operating system's local terraform directory.
+
+1. You can `$ go build` to create your platform's executable.
+2. Find you `terraform.d` directory.
+3. Define your fake registry path. I chose to do `local.build/nhomble/groupme/<version>`
+4. `$ terraform init` and you should see the plugin copied to your project's `.terraform` directory.
