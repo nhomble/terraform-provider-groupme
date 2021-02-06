@@ -34,7 +34,7 @@ output a_group {
 
 == Local Development
 
-Until (and I probably won't) register this to `registry.terraform.io`, your only way of using this is to install in your operating system's local terraform directory.
+Until (and I probably won't) register this to `registry.terraform.io`, your only way of using this is to install into your local terraform directory.
 
 1. You can `$ go build` to create your platform's executable.
 2. Find you `terraform.d` directory.
