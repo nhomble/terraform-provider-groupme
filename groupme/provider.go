@@ -21,6 +21,9 @@ func Provider() *schema.Provider {
 			"groupme_groups": dataResourceGroups(),
 			"groupme_group":  dataResourceGroup(),
 		},
+		ResourcesMap: map[string]*schema.Resource{
+			"groupme_group": resourceGroup(),
+		},
 		ConfigureContextFunc: configureGroupmeProvider,
 	}
 }
