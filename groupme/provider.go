@@ -2,6 +2,7 @@ package groupme
 
 import (
 	"context"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	g "github.com/nhomble/groupme.go/groupme"
@@ -23,6 +24,7 @@ func Provider() *schema.Provider {
 		},
 		ResourcesMap: map[string]*schema.Resource{
 			"groupme_group": resourceGroup(),
+			"groupme_bot":   resourceBot(),
 		},
 		ConfigureContextFunc: configureGroupmeProvider,
 	}

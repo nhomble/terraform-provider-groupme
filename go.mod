@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.4.2
-	github.com/nhomble/groupme.go v0.0.0-20210110195459-97c8a51c1cdb
+	github.com/nhomble/groupme.go v0.0.0-20221121052903-a7c9d71d31f3
 )
 
 require (
